@@ -1,0 +1,39 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int ArrSize;
+	int num[ArrSize];
+	int temperature;
+	
+	
+	cout << "Selection Sorting... " << endl;
+	cout << "Enter the size of array: "; cin >> ArrSize;
+	cout << "Enter the " << ArrSize << " Elements: ";
+	
+	for (int v=0; v < ArrSize; v++)
+	{
+		cin >> num[v];
+	}
+	
+	for (int v=0; v < ArrSize - 1; v++)
+	{
+		for (int a= v+1; a < ArrSize; a++)
+		{
+			if (num[v] > num[a])
+			{
+				temperature = num[v];
+				num[v] = num[a];
+				num[a] = temperature;
+			}
+		}
+	}
+	
+	for (int v=0; v < ArrSize; v++)
+	{
+		cout << num[v] << " ";
+	}
+}
+
